@@ -1,0 +1,13 @@
+{
+  "name": "cloud-quiz",
+  "version": "1.0.0",
+  "description": "quiz your aws knowledge",
+  "main": "index.js",
+  "repository": "git@github.com:aStewartDesign/cloud-quiz.git",
+  "author": "Andrew Stewart <andrew@astewartdesign.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nunjucks": "^3.1.7",
+    "yargs": "^13.2.1"
+  }
+}
