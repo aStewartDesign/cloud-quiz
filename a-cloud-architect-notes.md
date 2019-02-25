@@ -10,16 +10,16 @@ What is an AWS edge location?
 What is IAM?
 - Identity Access Management allows you to control permissions and users within AWS
 
-IAM Users
+What do IAM Users represent?
 - End users such as people, or employees
 
-IAM Groups
+What are IAM Groups?
 - A collection of users. Each user in the group will inherit the permissions of the group
 
-IAM Policies
+What are IAM Policies?
 - Documents that describe permissions
 
-IAM Roles
+What are IAM Roles?
 - Create and assign roles to AWS resources so they can communicate with each other
 
 Is IAM Universal?

@@ -26,7 +26,7 @@ function main() {
 
     const result = transform(resolvedFile);
 
-    fs.writeFileSync(`${resolvedFile}.json`, JSON.stringify(result), {
+    fs.writeFileSync(`questions-and-answers.json`, JSON.stringify(result), {
         encoding: 'utf-8'
     });
     console.log('Wrote questions out.');

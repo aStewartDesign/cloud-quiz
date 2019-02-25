@@ -1,4 +1,4 @@
-const notes = require('./a-cloud-architect-notes.md.json');
+const notes = require('./questions-and-answers.json');
 const readline = require('readline');
 
 const rl = readline.createInterface({
