@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aws cloud architecture quiz | asdsgn.net</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #question {
+            font-weight: 500;
+        }
+
+        #answer {
+            margin-top: 0.5em;
+        }
+
+        .qna {
+            margin-bottom: 1em;
+        }
+
+        .btn {
+            padding: 0.75em;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cloud Quiz</h1>
+    <div class="qna">
+        <div id="question">Loading...</div>
+        <div id="answer"></div>
+    </div>
+    <button class="btn" id="show">Show answer</button>
+    <button class="btn" id="next">Next question</button>
+
+    <script>
+        (function() {
+            const qna = null;
+            const elQuestion = document.getElementById('question');
+            const elAnswer = document.getElementById('answer');
+            const elShow = document.getElementById('show');
+            const elNext = document.getElementById('next');
+
+            elAnswer.style.display = 'none';
+            elShow.style.display = 'none';
+            elNext.style.display = 'none';
+
+            elShow.addEventListener('click', () => {
+                elAnswer.style.display = 'block';
+                elShow.style.display = 'none';
+                elNext.style.display = 'inline-block';
+            });
+
+            elNext.addEventListener('click', () => {
+                elQuestion.textContent = 'Loading...';
+                elAnswer.textContent = '';
+                elAnswer.style.display = 'none';
+                elNext.style.display = 'none';
+                getQNA();
+            });
+
+            function getQNA() {
+                fetch('https://9zuwan1sdd.execute-api.us-west-2.amazonaws.com/production/cloud-quiz')
+                    .then((resp) => resp.json())
+                    .then((qna) => {
+                        qna = qna;
+                        elQuestion.textContent = qna.question;
+                        elAnswer.textContent = qna.answer;
+                        elShow.style.display = 'inline-block';
+                    });
+            }
+
+            getQNA();
+        })();
+    </script>
+</body>
+</html>
