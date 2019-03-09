@@ -9,5 +9,10 @@
   "dependencies": {
     "nunjucks": "^3.1.7",
     "yargs": "^13.2.1"
+  },
+  "scripts": {
+    "build-qna": "node transform-notes.js --file a-cloud-architect-notes.md",
+    "publish": "aws s3 sync ./src s3://cloud-quiz.asdsgn.net",
+    "deploy": "npm run build-qna && npm run publish"
   }
 }

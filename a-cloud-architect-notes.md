@@ -357,3 +357,42 @@ CloudWatch is for monitoring and CloudTrail is for auditing.
 
 You can attach an IAM role to an EC2 instance that is already created and running.
 - true
+
+What is the EC2 instance meta data url?
+- http://169.254.169.254/latest/meta-data/
+
+What are the two kinds of EC2 placement groups?
+- Clustered placement groups, spread placement groups
+
+A clustered placement group can span availability zones
+- false
+
+A spread placement group can span availability zones
+- true
+
+An EC2 placement group name must be unique within what?
+- your aws account
+
+You can make any type of EC2 instance part of a placement group
+- false
+
+You can merge placement groups
+- false
+
+You can connect multiple EC2 instances to Elastic File System
+- true
+
+Which service gives you scalable block storage?
+- Elastic file system (EFS)
+
+Lambda scales up, not out, automatically
+- false
+
+Lambda functions are independent, one function equals one event
+- true
+
+Which services are serverless?
+- Lambda, S3, API gateway, Dynamo DB
+
+AWS X-Ray helps you debug what other service?
+- Lambda
