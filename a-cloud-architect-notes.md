@@ -392,7 +392,451 @@ Lambda functions are independent, one function equals one event
 - true
 
 Which services are serverless?
-- Lambda, S3, API gateway, Dynamo DB
+- Lambda, S3, API gateway, Dynamo DB, EFS, SNS, SQS, Aurora Serverless
 
 AWS X-Ray helps you debug what other service?
 - Lambda
+
+What needs to be enabled if you're having trouble accessing an API on another domain?
+- CORS
+
+What helps you remember the EC2 instance types?
+- FIGHT DR MC PX
+
+You can mount an EBS volume to multiple EC2 instances.
+- false
+
+You can use 3rd party tools to encrypt your EBS volume.
+- true
+
+Instance store volumes are also known as what?
+- Ephemeral storage
+
+You can launch an AMI stored in a different region.
+- false
+
+What security method do you want to used to give EC2 instances permissions to access other AWS services?
+- Roles
+
+AWS roles are region-specific.
+- false
+
+A reserved instance can be moved from one region to another.
+- false
+
+The use of a placement group is ideal for what situation?
+- When you need high network throughput and low latency.
+
+You can delete a snapshot of an EBS volume that is used as the root device of a registered AMI.
+- false
+
+What is the underlying hypervisor for EC2?
+- Nitro and Xen
+
+Which port does DNS operate on?
+- 53
+
+Which DNS record translates the name of a domain to an IP address?
+- A record
+
+What is the name for the length of time a DNS record is cached in the resolving server or in the client?
+- Time to live (TTL)
+
+Which DNS record resolves from one address to another?
+- Canonical Name (CName)
+
+Which DNS record allows you to map a domain name to aws resources?
+- Alias records
+
+You can use a CName for naked domains (eg: mywebsite.com).
+- false
+
+You can use an Alias record for naked domains (eg: mywebsite.com).
+- true
+
+Elastic Load Balancers must be resolved using a DNS name.
+- true
+
+Which DNS record is only defined once per DNS hosted zone?
+- Start of authority (SOA) record
+
+What are the six common DNS types?
+- SOA records, NS records, A records, CNames, MX records, PTR records
+
+What are the six DNS routing policies available on AWS?
+- Simple, weighted, latency-based, failover, geolocation, multivalue
+
+Which Route53 routing policy is best for when you have one web resource to access?
+- Simple routing
+
+Which Route53 routing policy allows you to divide a percentage of traffic to different resources?
+- Weighted routing
+
+Which Route53 routing policy allows traffic to be routed to the resource with the quickest response time?
+- Latency routing
+
+You can't mix Route53 routing policies.
+- true
+
+Which Route53 routing policy allows traffic to be re-routed in the event a resource fails?
+- Failover routing
+
+Which Route53 routing policy allows traffic to be routed based on their location?
+- Geolocation routing
+
+Which Route53 routing policy allows you to create multiple record sets with health checks and divides traffic across all healthy instances?
+- Multivalue answer routing
+
+How many domain names can you have in Route53 and can this limit be increased?
+- 50 and yes
+
+What are the six database types you can use in RDS?
+- SQL, MySQL, PostgreSQL, Oracle, Aurora, MariaDB
+
+What is the NoSQL database offering in AWS?
+- DynamoDB
+
+What service do you use to process large amounts of data in a data warehouse?
+- RedShift
+
+Which service do you use to cache database responses in memory?
+- Elasticache
+
+What are the two types of RDS backups?
+- Automated backups and database snapshots
+
+Database snapshots are done automatically.
+- false
+
+A restored RDS backup has the same DNS name.
+- false
+
+How do you create an encrypted RDS instance?
+- Create a snapshot, copy it, and encrypt the copy. Then launch a new instance from the encrypted snapshot.
+
+What allows you to have an exact copy of your production database in another availability zone for disaster recovery?
+- Multi-AZ RDS
+
+What allows you to push data out from one RDS database to other database instances to increase read performance?
+- Read replica
+
+How many read replicas can you have in an RDS database?
+- Five
+
+Each RDS read replica will have it's own DNS end point.
+- true
+
+You cannot have a read replica of a read replica.
+- false
+
+What do you want to use to scale an RDS database?
+- Read replica
+
+You must have automatic backups turned on in order to deploy a read replica.
+- true
+
+You can have a read replica of a database that also has multi-az.
+- true
+
+Read replicas can be promoted to be their own database.
+- true
+
+Read replicas can be in a different region.
+- true
+
+DynamoDb is stored on what kind of storage?
+- SSD storage
+
+What are the two read options available in DynamoDb?
+- Eventual consistent reads and strongly consistent reads
+
+What do you pay for when using DynamoDb?
+- Read capacity, write capacity, and storage
+
+What service do you use for analyzing large numbers of records?
+- RedShift
+
+What are the two kinds of RedShift configurations?
+- Single node and multi-node
+
+In RedShift, how many compute nodes can you have in a multi-node configuration?
+- 128
+
+Redshift uses what kind of data storage?
+- Columnar data storage
+
+Which service makes it easy to deploy, operate, and scale an in-memory cache in the cloud?
+- Elasticache
+
+What are the two types of caches you can use with Elasticache?
+- Memcached and Redis
+
+Which service can be used to alleviate a non-changing database under a lot of stress/load?
+- Elasticache
+
+Which service can be used to alleviate a database under stress due to excessive analytics processing?
+- Redshift
+
+RDS is what kind of database service?
+- On line transaction processing (OLTP)
+
+Redshift is what kind of database service?
+- On line analytical processing (OLAP)
+
+How many copies of your data does Amazon Aurora store?
+- Six
+
+What is the default port number for MySQL installations?
+- 3306
+
+In RDS, what is the maximum backup retention period?
+- 35 days
+
+When you add a rule to an RDS DB security group, you must specify a port number or protocol.
+- false
+
+With new RDS Db instances, automated backups are enabled by default.
+- true
+
+Which data formats does Amazon Athena support?
+- JSON, Apache ORC, Apache Parquet
+
+You can RDP or SSH in to an RDS instance to see what is going on with the operating system.
+- false
+
+In RDS, changes to the backup window take effect the next day.
+- false
+
+If you are using Amazon RDS Provisioned IOPS storage with a Microsoft SQL Server database engine, what is the maximum size RDS volume you can have by default?
+- 16TB
+
+Security groups can span subnets.
+- true
+
+All subnets in a default VPC have a route out to the internet.
+- true
+
+You can connect one VPC to another VPC even in a different AWS account.
+- true
+
+A VPC is a logical datacenter in AWS.
+- true
+
+One subnet can span availability zones.
+- false
+
+What makes up a VPC?
+- Internet Gateways, virtual private gateways, route tables, network access control lists, subnets, and security groups.
+
+Which IP addresses are reserved in an AWS VPC subnet?
+- The first four and the last IP addresses
+
+You can have multiple internet gateways attached to a VPC.
+- false
+
+Security groups span VPCs.
+- false
+
+You only need one NAT gateway across multiple availability zones.
+- false
+
+What must be disabled on a NAT instance in order for connected instances to access the internet through the NAT instance?
+- Source/Destination check
+
+NAT instances are located in a private subnet.
+- false
+
+What must be created from the private subnet to a NAT instance for the private instance to access the internet?
+- Route out
+
+What determines the amount of traffic a NAT instance can support?
+- The size of the instance
+
+A NAT instance is behind a security group.
+- true
+
+A NAT gateway is behind a security group.
+- false
+
+Are NAT instances or NAT gateways preferred by enterprises?
+- NAT gateway
+
+NAT gateways must be patched and updated.
+- false
+
+Do NAT instances or NAT gateways scale automatically?
+- NAT gateways
+
+What must be updated in order for NAT gateways or NAT instances to work?
+- Route tables
+
+NAT gateways are automatically assigned an IP address.
+- true
+
+Source/Destination checks must be disabled for NAT gateways.
+- false
+
+A subnet can be associated with multiple ACL's.
+- false
+
+What are the default access rules for inbound and outbound traffic in a new Network Access Control List (NACL)?
+- Deny everything
+
+What rule number does Amazon recommend starting at when creating rules in a Network Access Control List (NACL)?
+- 100
+
+Outbound rules are automatically created for each inbound rule in a Network Access Control List (NACL).
+- false
+
+A subnet can only be associated with one Network Access Control List (NACL).
+- true
+
+Network Access Control Lists are applied after security groups.
+- false
+
+The VPC's default NACL allows all inbound and outbound traffic by default.
+- true
+
+Custom NACL's allow all inbound and outbound traffic by default.
+- false
+
+You can associate a network ACL with multiple subnets.
+- true
+
+A subnet can only be associated with one network ACL at a time.
+- true
+
+Network ACL's are stateless meaning inbound and outbound rules must be defined.
+- true
+
+You can block IP addresses using security groups.
+- false
+
+You can block IP addresses using Network ACL's.
+- true
+
+VPC flow logs can be created at what levels?
+- VPC, subnet, and network interface level
+
+VPC flow logs allow you to monitor what?
+- IP traffic flow information
+
+Where are VPC flow logs recorded?
+- CloudWatch
+
+What must be created in CloudWatch to create a VPC flow log.
+- A log group
+
+You can tag a VPC flow log.
+- false
+
+Can you enable flow logs for an external VPC peered with your VPC?
+- No, the peer VPC must be in your account
+
+Once a flow log is created you cannot change it's configuration.
+- true
+
+All IP traffic is monitored with a VPC flow log.
+- false
+
+A NAT is used to provide internet traffic to EC2 instances in private subnets.
+- true
+
+A Bastion is used to securely administer EC2 instances in private subnets.
+- true
+
+VPC endpoints enable what function?
+- Private subnets access to AWS resources
+
+How many public subnets do you need to deploy an elastic load balancer in a VPC?
+- Two
+
+What are the two kinds of VPC endpoints?
+- Gateways and interfaces
+
+By default, how many VPCs are allowed in each AWS Region?
+- Five
+
+What is the purpose of an Egress-Only Internet Gateway?
+- Allow IPv6 based traffic within a VPC to access the Internet, whilst denying any Internet based resources the possibility of initiating a connection back into the VPC
+
+You have five VPCs in a 'hub and spoke' configuration, with VPC 'A' in the center and individually paired with VPCs 'B', 'C', 'D', and 'E', which make up the 'spokes'. There are no other VPC connections. Which of the following VPCs can VPC 'B' communicate with directly?
+- VPC 'A'
+
+By default, instances in new subnets in a custom VPC can communicate with each other across Availability Zones.
+- true
+
+What three things are created automatically when creating a custom VPC?
+- Route table, access control list, security group
+
+A subnet can span multiple Availability Zones.
+- false
+
+What is SQS?
+- Simple Queue Service; a distributed message queueing service
+
+SQS operates with what kind of system model?
+- Pull-based
+
+What service helps decouple the components of an application so they can run independently.
+- SQS
+
+What are the two types of SQS queues?
+- Standard Queues and FIFO Queues
+
+Standard SQS queues maintain the order in which messages are received.
+- false
+
+FIFO SQS queues maintain the order in which messages are received.
+- true
+
+How large can SQS messages be?
+- 256 KB
+
+How long can messages be kept in SQS?
+- 1 minute to 14 days
+
+What is the default retention period for SQS messages?
+- 4 days
+
+What is the SQS visibility timeout?
+- The amount of time a message is invisible in the queue after the message is picked up.
+
+What is the default SQS visibility timeout interval?
+- 30 seconds
+
+What is the maximum SQS visibility timeout?
+- 12 hours
+
+Which SQS type offers best-effort ordering and guarantees messages will be delivered at least once?
+- Standard queues
+
+Which SQS type offers strict order preservation and guarantees messages will only be delivered once?
+- FIFO Queues
+
+What are the two types of SQS polling?
+- Short and long polling
+
+Which SQS polling method returns immediately even if no messages are in the queue?
+- Short polling
+
+Which SQS polling method polls the queue periodically and only returns a response when a message is in the queue or the timeout is reached?
+- Long polling
+
+Which service operates a task-oriented API?
+- Simple Workflow Service (SWF)
+
+Which service operates a pull-based, message-oriented API?
+- Simple Queue Service (SQS)
+
+Which service ensures a task is assigned only once and never duplicated?
+- Simple Workflow Service (SWF)
+
+Which service leverages workers and deciders?
+- Simple Workflow Service (SWF)
+
+Which service follows the publish-subscribe messaging paradigm?
+- Simple Notification Service (SNS)
+
+Which service uses a "push" mechanism?
+- Simple Notification Service (SNS)
